@@ -3,6 +3,7 @@ import fogged from "./data/fogged.json";
 import { Row, Col } from "antd";
 import "./App.css";
 import { championImage } from "./data/champions";
+import ChampionCollapse from "./components/ChampionCollapse";
 const capitalize = s => {
   if (typeof s !== "string") return "";
   return s.charAt(0).toUpperCase() + s.slice(1);
@@ -13,18 +14,7 @@ function App() {
     <div className="App">
       <Row type="flex" justify="space-around">
         {fogged.map(value => (
-          <div>
-            <Col span={2} style={{ margin: "30px" }}>
-              <img
-                src={championImage(
-                  value.champion.toLowerCase().replace(/[\s'.]/g, "")
-                )}
-              />
-              <div style={{ textAlign: "justify", whiteSpace: "nowrap" }}>
-                {value.champion}
-              </div>
-            </Col>
-          </div>
+          <ChampionCollapse champion={value.champion} />
         ))}
       </Row>
     </div>
