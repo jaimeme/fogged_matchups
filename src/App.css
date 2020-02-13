@@ -44,5 +44,8 @@
 
 .Champion-text{
   text-align: center;
-  white-space: nowrap;
+}
+
+.What-text{
+  text-align: center;
 }

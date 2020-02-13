@@ -21,7 +21,9 @@ export default function ChampionCollapse(props) {
         <div className="Champion-text" >
           <Collapse>
             <Panel header={props.champion} key="1">
-              <div style={{ wordWrap: "break-word" }}>{props.text}</div>
+              <div className="What-text">
+                {props.text}
+              </div>
             </Panel>
           </Collapse>
 
