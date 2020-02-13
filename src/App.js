@@ -17,7 +17,7 @@ function App() {
         <Col span={14}>
           <Row type="flex" justify="space-around">
             {fogged.map(value => (
-              <ChampionCollapse champion={value.champion} text={value.what} />
+              <ChampionCollapse champion={value.champion} text={value.what} difficulty={value.difficulty} />
             ))}
           </Row>
         </Col>

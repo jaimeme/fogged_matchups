@@ -49,3 +49,16 @@
 .What-text{
   text-align: center;
 }
+
+.Hard-matchup{
+  background-color:#ff7875;
+}
+.Medium-matchup{
+  background-color:#fff566 ;
+}
+.Easy-matchup{
+  background-color:#95de64 ;
+}
+.Trolling-matchup{
+  background-color:#b37feb ;
+}

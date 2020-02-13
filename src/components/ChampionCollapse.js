@@ -3,11 +3,6 @@ import { championImage } from "../data/champions";
 import { Row, Col, Collapse } from "antd";
 const { Panel } = Collapse;
 
-const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
 
 export default function ChampionCollapse(props) {
   return (
@@ -19,7 +14,7 @@ export default function ChampionCollapse(props) {
           )}
         />
         <div className="Champion-text" >
-          <Collapse>
+          <Collapse className={switchColor(props.difficulty)}>
             <Panel header={props.champion} key="1">
               <div className="What-text">
                 {props.text}
@@ -29,6 +24,23 @@ export default function ChampionCollapse(props) {
 
         </div>
       </Col>
-    </div>
+    </div >
   );
+}
+
+function switchColor(difficulty) {
+  switch (difficulty) {
+    case "Easy":
+
+      return "Easy-matchup";
+    case "Medium":
+
+      return "Medium-matchup";
+    case "Hard":
+
+      return "Hard-matchup";
+    default:
+
+      return "Trolling-matchup";
+  }
 }
