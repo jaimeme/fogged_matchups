@@ -12,10 +12,16 @@ const capitalize = s => {
 function App() {
   return (
     <div className="App">
-      <Row type="flex" justify="space-around">
-        {fogged.map(value => (
-          <ChampionCollapse champion={value.champion} />
-        ))}
+      <Row>
+        <Col span={4}></Col>
+        <Col span={16}>
+          <Row type="flex" justify="space-around">
+            {fogged.map(value => (
+              <ChampionCollapse champion={value.champion} />
+            ))}
+          </Row>
+        </Col>
+        <Col span={4}></Col>
       </Row>
     </div>
   );
