@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <Row>
         <Col span={4}></Col>
-        <Col span={16}>
+        <Col span={14}>
           <Row type="flex" justify="space-around">
             {fogged.map(value => (
-              <ChampionCollapse champion={value.champion} />
+              <ChampionCollapse champion={value.champion} text={value.what} />
             ))}
           </Row>
         </Col>
