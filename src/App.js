@@ -11,16 +11,18 @@ const capitalize = s => {
 function App() {
   return (
     <div className="App">
-      <Row type="flex" justify="center" align="top">
+      <Row type="flex" justify="space-around">
         {fogged.map(value => (
           <div>
-            <Col span={6}>
+            <Col span={2} style={{ margin: "30px" }}>
               <img
                 src={championImage(
                   value.champion.toLowerCase().replace(/[\s'.]/g, "")
                 )}
               />
-              {value.champion}
+              <div style={{ textAlign: "justify", whiteSpace: "nowrap" }}>
+                {value.champion}
+              </div>
             </Col>
           </div>
         ))}
