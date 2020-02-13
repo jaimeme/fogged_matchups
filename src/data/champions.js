@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const aatrox = require("../img/champion/Aatrox.png");
 const ahri = require("../img/champion/Ahri.png");
 const akali = require("../img/champion/Akali.png");
